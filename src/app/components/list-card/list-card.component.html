@@ -1,0 +1,24 @@
+<div class="card">
+	<div class="card-body">
+		<h5 class="titulo">List cards</h5>
+		<table class="table">
+			<tbody>
+				<tr *ngFor="let card of listCards">
+					<td>{{ card.owner }}</td>
+					<td>{{ card.cardNumber }}</td>
+					<td>{{ card.dateOfExpire }}</td>
+					<td>
+						<i
+							(click)="editCard(card)"
+							class="far fa-edit text-info"
+						></i>
+						<i
+							(click)="deleteCard(card)"
+							class="far fa-trash-alt text-danger"
+						></i>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
